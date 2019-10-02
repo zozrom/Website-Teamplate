@@ -1,0 +1,323 @@
+*,*:before,*:after{
+	box-sizing: border-box;
+}
+body{
+	margin: 0;
+	padding: 0;
+ font-family: 'Montserrat', sans-serif;
+font-size: 20px;
+}
+.bigger{
+	
+width:100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	
+	
+}
+.the_bigest{
+	
+	
+	width: 100%;
+	height: 100vh;	
+	background: url("../images/intro.jpg")  center no-repeat;
+	background-size: cover;
+}
+
+
+h1,h2,h3,h4,h5,h6{
+	margin: 0;
+}
+
+
+
+
+/*Header*/
+header{
+	z-index: 10
+}
+.mogo{
+	font-size: 30px;
+	font-weight: bold;
+	color: #fff;
+}
+nav{
+	font-size: 14px;
+	text-transform: uppercase;
+}
+.nav_link{
+	display: inline-block;
+	vertical-align: top;
+	margin:  0 15px;
+	color: #fff;
+	text-decoration: none;
+	transition: color 0.5s ;
+	
+	position: relative
+}
+.nav_link:hover{
+	color: #fce38a;
+}
+.header_inner{
+	display: flex;
+	justify-content: space-between;/*Расположение блков по бокам*/
+	align-items: center;/*Расположение елементов в блоке*/
+	
+	padding-top: 30px;
+}
+.nav_link:after{
+	content: "";
+	display: block;
+	background-color: #fff;
+	width: 100%;
+	height: 3px;
+	
+	/*От главной ссилки у которой позиционирование relatiave*/
+	position: absolute;
+	top: 100%;
+	left:0;
+	
+	display: none;
+}
+.nav_link:hover:after/*При наводе на ссилку вивод полосы*/
+{
+	display: block;
+}
+
+
+
+
+/*Title*/
+.big{
+
+	position: relative;
+	top:150px;
+	width: 100%;
+	max-width: 880px;
+	margin: 0 auto; 
+	text-align: center;
+}
+.sup_title{
+	
+	font-size: 72px;
+	color: #fff;
+	font-family: 'Kaushan Script', cursive;
+margin-bottom: 5px;
+}
+.title{
+	position: relative;
+	top: 28px;
+	color: #fff;
+	font-size: 150px;
+	font-weight: bold;
+	text-transform: uppercase;
+	line-height: 1;
+}
+
+/*Under title*/
+.title:after{
+	content: "";
+	display: block;
+	width: 60px;
+	height: 3px;
+	background-color: #fff;
+	margin: 40px auto 0;
+	
+}
+
+.Button{
+	margin-top: 80px
+}
+.but{
+	padding: 15px 20px;
+	border: 3px solid #fff;
+	
+	color: #fff;
+	text-decoration: none;
+	transition: background 0.5s,color 2s;
+	
+}
+.but:hover{
+	background-color: #fff;
+	color: #333;
+}
+
+
+/*slider*/
+.slider{
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	
+
+}
+.slider_inner{
+
+	display: flex;
+	justify-content: center;
+}
+.slider_item{
+float: left;
+	border-top: 3px solid #eee;
+	padding: 20px 0;
+	margin-left: 55px;
+	width: 12%;
+	font-size: 30px;
+	color: #fff;
+	text-transform: uppercase;
+	
+	position: relative;/*Что би полоску могли позиционировать абсолютно єтого елемента*/
+}
+
+.slider_number{
+			word-spacing: 150px;
+
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.slider_item.active:before{
+	content: "";
+	display: block;
+	width: 70px;
+	height: 3px;
+	position: absolute;/*С помощью блока relative в slider_item*/
+	background-color: #f38181;
+	top: -3px;
+}
+
+
+
+/*Section*/
+/*Header*/
+.section{
+	padding: 80px 0;
+}
+.section_header{
+	width: 100%;
+	max-width: 950px;
+margin: 0 auto 40px; 
+		text-align: center;
+}
+.section_sup_title{
+	font-family: 'Kaushan Script', cursive;
+	font-size: 24px;
+	color: #333;
+}
+.section_sub_title{
+	font-size: 30px;
+	color: #333;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.section_sub_title:after{
+	
+	content: "";
+	display: block;
+	background-color: #f38181;
+	height: 3px;
+	width: 60px;
+	margin: 30px auto 30px;
+}
+.section_text{
+	font-size: 15px; 
+	color: #999;
+}
+
+
+
+/*About*/
+.about{
+	display: flex;
+	justify-content: space-between;/*Чтобы раздвинуть наши блоки */
+}
+.about_item{
+	width: 380px;
+	background-color: #95e1d3;
+	position: relative;
+}
+
+.about_item:hover .about_images
+/*При наводе сдвигаем контейнер 
+about_images  */
+{
+	transform: translate3d(-10px,-10px,0);
+}
+.about_item:hover .about_images img{
+	opacity: 0.1;  
+}
+
+/*При наводе вибивал текст с не прозрачностью*/
+.about_item:hover .text_in_img{
+	opacity: 1;
+}
+
+
+.about_images
+/*Для создание заднего цвета при наводе*/
+{
+	background: linear-gradient(to bottom, #f38181,#fce38a);
+	/*Градиент сверху вниз */
+	
+	transition: transform 0.2s linear;
+}
+.about_images img{
+	display: block;
+	transition: opacity 0.1s linear
+}
+.text_in_img{
+	color: #eee;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: bold;
+	font-size: 18px;
+	
+	/*Скриваем текст */
+	opacity: 0;
+	
+	
+	/*Для выравнивание по центру*/
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	left: 0;
+	z-index: 2;
+	transform: translate3d(0,-50%,0);
+	transition: opacity 0.1s linear;
+}
+
+
+
+
+
+
+
+/*Statistics*/
+.statistics{
+	background-color: #95e1d3;
+	
+}
+.stat{
+	display: flex;
+	justify-content: space-around;
+}
+.stat_item {
+	padding: 70px 25px ;
+	border-left: 1px solid #b5eae0;
+	text-align: center;
+	color: #fff;
+}
+.stat_item:last-child{
+	border-right: 1px solid #b5eae0;
+}
+.stat_count{
+	margin-bottom: 10px;
+	font-size: 72px;
+	font-weight: bold;
+	line-height: 1;
+}
+stat_text{
+	font-weight: 14px;
+	text-transform: uppercase;
+}
